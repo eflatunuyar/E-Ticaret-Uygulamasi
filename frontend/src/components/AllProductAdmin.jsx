@@ -75,7 +75,7 @@ const AllProductAdmin = () => {
   return (
     <>
       <h1 style={{ color: "green", textAlign: "center", margin: "5px" }}>
-        ALL Live Products{" "}
+        Tüm Ürünler{" "}
       </h1>
 
       {showUpdateModal && (
@@ -94,22 +94,21 @@ const AllProductAdmin = () => {
             </div>
             <div className="product-info1">
               <h2>{product.name}</h2>
-              <p>Product ID: {product.productId}</p>
-              <p>Category: {product.category}</p>
+              <p>Ürün ID: {product.productId}</p>
               <p>
-                Description:{" "}
+                Ürün Açıklaması:{" "}
                 {product.description.length > 30
                   ? product.description.substring(0, 50) + "..."
                   : product.description}
               </p>
 
-              <h2 className="product-price1">Price: ₹ {product.price}</h2>
+              <h2 className="product-price1">Price: {product.price}</h2>
               <div className="button-container1">
                 <button onClick={() => updateProduct(product.productId)}>
-                  update
+                  güncelle
                 </button>
                 <button onClick={() => deleteProduct(product.productId)}>
-                  delete
+                  sil
                 </button>
               </div>
             </div>

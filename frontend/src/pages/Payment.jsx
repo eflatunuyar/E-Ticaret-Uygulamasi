@@ -39,27 +39,27 @@ const Payment = () => {
     <div className="payment-container" style={bg}>
       <div className="payment-card">
         <div className="user-info">
-          <h1 style={{ color: "green" }}>Payment Details</h1>
+          <h1 style={{ color: "green" }}>Ödeme Detayı</h1>
           <p>
-            Name: {paymentData.user && paymentData.user.firstName}{" "}
+            Ad: {paymentData.user && paymentData.user.firstName}{" "}
             {paymentData.user && paymentData.user.lastName}
           </p>
-          <p>Email: {paymentData.user && paymentData.user.email}</p>
-          <p>Phone Number: {paymentData.user && paymentData.user.phoneNumber}</p>
+          <p>Kullanıcı Adı: {paymentData.user && paymentData.user.email}</p>
+          <p>Telefon Numarası: {paymentData.user && paymentData.user.phoneNumber}</p>
         </div>
 
         <div className="payment-info">
-          <p>Payment ID: {paymentData.paymentId}</p>
+          <p>Ödeme ID: {paymentData.paymentId}</p>
           <p>
-            Payment Date:{" "}
+            Ödeme Tarihi:{" "}
             {paymentData.paymentDate &&
               new Date(paymentData.paymentDate).toLocaleString()}
           </p>
-          <p>Payment Amount: ${paymentData.paymentAmount}</p>
-          <p>Payment Method: {paymentData.paymentMethod}</p>
-          <p>Payment Status: {paymentData.paymentStatus}</p>
+          <p>Ödeme Tutarı: ${paymentData.paymentAmount}</p>
+          <p>Ödeme Metodu: {paymentData.paymentMethod}</p>
+          <p>Ödeme Durumu: {paymentData.paymentStatus}</p>
         </div>
-        <h2>Thanks You for shopping with us...Visit Again!</h2>
+        <h2>Siparşiniz İçin Teşekkürler</h2>
       </div>
     </div>
   );

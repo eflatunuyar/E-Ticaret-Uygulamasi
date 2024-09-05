@@ -21,10 +21,10 @@ const UpdateProductForm = ({ product, onUpdate, onClose }) => {
           <span className="close-button" onClick={onClose}>
             &times;
           </span>
-          <h2>Update Product</h2>
+          <h2>Ürün Güncelle</h2>
           <form onSubmit={handleSubmit}>
             <div>
-              <label htmlFor="name">Product Name:</label>
+              <label htmlFor="name">Ürün Adı:</label>
               <input
                 type="text"
                 name="name"
@@ -33,7 +33,7 @@ const UpdateProductForm = ({ product, onUpdate, onClose }) => {
               />
             </div>
             <div>
-              <label htmlFor="imageUrl">Image URL:</label>
+              <label htmlFor="imageUrl">Resim URL:</label>
               <input
                 type="text"
                 name="imageUrl"
@@ -42,7 +42,7 @@ const UpdateProductForm = ({ product, onUpdate, onClose }) => {
               />
             </div>
             <div>
-              <label htmlFor="description">Description:</label>
+              <label htmlFor="description">Ürün Açıklaması:</label>
               <input
                 type="text"
                 name="description"
@@ -51,7 +51,7 @@ const UpdateProductForm = ({ product, onUpdate, onClose }) => {
               />
             </div>
             <div>
-              <label htmlFor="price">Price:</label>
+              <label htmlFor="price">Fiyat:</label>
               <input
                 type="number"
                 name="price"
@@ -60,7 +60,7 @@ const UpdateProductForm = ({ product, onUpdate, onClose }) => {
               />
             </div>
             <div>
-              <label htmlFor="category">Category:</label>
+              <label htmlFor="category">Kategori:</label>
               <input
                 type="text"
                 name="category"

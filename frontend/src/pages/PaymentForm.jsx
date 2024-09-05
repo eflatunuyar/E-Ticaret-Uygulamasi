@@ -34,34 +34,34 @@ const PaymentForm = () => {
   return (
     <div className="payment-form-container" style={bg}>
       <form className="payment-form" onSubmit={handleSubmit}>
-        <h2>Payment Information</h2>
+        <h2>Ödeme Bilgileri</h2>
         <div className="form-group">
-          <label htmlFor="cardNumber">Card Number</label>
+          <label htmlFor="cardNumber">Kart Numarası</label>
           <input
             type="text"
             id="cardNumber"
             name="cardNumber"
             value={paymentData.cardNumber}
             onChange={handleInputChange}
-            placeholder="Enter card number"
+            placeholder="kart numarasını giriniz"
             required
           />
         </div>
         <div className="form-group">
-          <label htmlFor="cardHolder">Card Holder</label>
+          <label htmlFor="cardHolder">Kart Sahibi</label>
           <input
             type="text"
             id="cardHolder"
             name="cardHolder"
             value={paymentData.cardHolder}
             onChange={handleInputChange}
-            placeholder="Enter card holder's name"
+            placeholder="kart sahibi adını giriniz"
             required
           />
         </div>
         <div className="form-row">
           <div className="form-group">
-            <label htmlFor="expirationDate">Expiration Date</label>
+            <label htmlFor="expirationDate">Kart Tarihini Giriniz</label>
             <input
               type="text"
               id="expirationDate"
@@ -85,7 +85,7 @@ const PaymentForm = () => {
             />
           </div>
         </div>
-        <button type="submit">Make Payment</button>
+        <button type="submit">Ödeme Yap</button>
       </form>
     </div>
   );

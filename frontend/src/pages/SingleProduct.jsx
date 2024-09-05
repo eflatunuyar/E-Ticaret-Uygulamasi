@@ -36,7 +36,7 @@ const SingleProduct = () => {
   };
   return (
     <>
-    <h1 style={{color:"green",textAlign:"center",margin:"20px"}}>Single Product </h1>
+    <h1 style={{color:"green",textAlign:"center",margin:"20px"}}>Ürün</h1>
     <div className="product-container">
      
       <div className="product-details">
@@ -46,9 +46,8 @@ const SingleProduct = () => {
 
         <div className="product_details">
           <h2>{product.name}</h2>
-          <p>Category: {product.category}</p>
-          <p>Description: {product.description}</p>
-          <p>Price: ₹ {product.price}</p>
+          <p>Ürün Açıklaması: {product.description}</p>
+          <p>Fiyat: {product.price}</p>
 
           <div>
             <button
@@ -56,7 +55,7 @@ const SingleProduct = () => {
                 addProductToCart(product.productId);
               }}
             >
-              Add to Cart
+              Sepete Ekle
             </button>
           </div>
         </div>
@@ -69,7 +68,7 @@ const SingleProduct = () => {
               navigate("/user/cart");
             }}
           >
-            Move To Cart
+            Sepete Git
           </button>
         </div>
       </div>

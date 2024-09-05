@@ -7,53 +7,41 @@ const Footer = () => {
     <div className="footer">
       <div className="footer-grid">
         <div className="footer-section">
-          <h4>POLICY INFO</h4>
+          <h4>BİLGİLER</h4>
           <ul>
-            <li>Privacy Policy</li>
-            <li>Terms of Sale</li>
-            <li>Terms of Use</li>
-            <li>Report Abuse & Takedown Policy</li>
             <li>FAQ</li>
           </ul>
         </div>
         <div className="footer-section">
-          <h4>COMPANY</h4>
+          <h4>ŞİRKET</h4>
           <ul>
-            <li>Impact@eCommerseAPp</li>
-            <li>Careers</li>
-            <li>Blog</li>
-            <li>Sitemap</li>
-            <li>Contact Us</li>
+            <li>eflatunerdemuyar@gmail.com</li>
           </ul>
         </div>
         <div className="footer-section">
-          <h4>E-Commerse</h4>
+          <h4>E TİCARET</h4>
           <ul>
-            <li>Product App</li>
-            <li>Sell on our Website</li>
-            <li>Media Enquiries</li>
+            <li>Uygulama</li>
+            <li>Website</li>
+            <li>Medyalar</li>
           </ul>
         </div>
         <div className="footer-section">
-          <h4>POPULAR LINKS</h4>
+          <h4>POPÜLER LİNKLER</h4>
           <ul>
-            <li>Top Product</li>
-            <li>Groceries</li>
-            <li>Vegetable</li>
-            <li>Fruits</li>
+            <li>Tüm ürünler</li>
+            <li>Elektronik</li>
+            <li>Araç</li>
           </ul>
         </div>
         <div className="footer-section">
-          <h4>SUBSCRIBE</h4>
+          <h4>Abone ol</h4>
           <div className="subscribe-box">
-            <input type="text" placeholder="Enter your email" />
-            <button>SUBSCRIBE</button>
+            <input type="text" placeholder="E maıl" />
+            <button>Abone ol</button>
           </div>
-          <p>
-            Register now to get updates on promotions and coupons
-          </p>
           <p className="admin-link" >
-            <Link to="/admin-Login"  style={{color:"white"}}>Admin Access</Link>
+            <Link to="/admin-Login"  style={{color:"white"}}>Admin Girişi</Link>
           </p>
         </div>
       </div>

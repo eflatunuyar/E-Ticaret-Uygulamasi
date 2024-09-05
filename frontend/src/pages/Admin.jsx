@@ -31,9 +31,9 @@ const Admin = () => {
             setSelectedComponent(<AllProductAdmin />);
           }}
         >
-          Admin Home
+          Admin Sayfası
         </h3>
-        <h1 style={{ textAlign: "center", color: "blue" }}>ADMIN PAGE</h1>
+        <h1 style={{ textAlign: "center", color: "blue" }}>ADMIN Sayfası</h1>
         <h3
           onClick={() => {
             localStorage.removeItem("adminid");
@@ -41,7 +41,7 @@ const Admin = () => {
             navigate("/admin-login");
           }}
         >
-          Logout
+          Çıkış yap
         </h3>
       </div>
 
@@ -54,21 +54,21 @@ const Admin = () => {
                 setSelectedComponent("add-product");
               }}
             >
-              Add New Product
+              Yeni Ürün Ekle
             </li>
             <li
               onClick={() => {
                 setSelectedComponent("all-orders");
               }}
             >
-              View All Orders
+              Tüm Ürünleri Gör
             </li>
             <li
               onClick={() => {
                 setSelectedComponent("add-customer");
               }}
             >
-              View All Customer
+              Tüm Kullanıcıları Gör
             </li>
           </ul>
         </div>

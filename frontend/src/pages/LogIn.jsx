@@ -72,14 +72,14 @@ const Login = () => {
     <>
     <div style={bg}>
       <h2 style={{ textAlign: "center", color: "White", margin: "20px" }}>
-       WELCOME TO USER LOGIN PAGE
+       Kullanıcı Girişine Hoş geldiniz
       </h2>
       <div className="loginConatiner" >
         <div className="login-form">
-          <h2 style={{ textAlign: "center" }}>LogIn </h2>
+          <h2 style={{ textAlign: "center" }}>Giriş Yap</h2>
           <form onSubmit={submitHandler}>
             <div className="form-group">
-              <label htmlFor="username">Username:</label>
+              <label htmlFor="username">Kullanıcı Adı:</label>
               <input
                 id="username"
                 type="text"
@@ -90,7 +90,7 @@ const Login = () => {
             </div>
             <br />
             <div className="form-group">
-              <label>Password:</label>
+              <label>Şifre:</label>
               <input
                 type="password"
                 name="password"
@@ -99,10 +99,10 @@ const Login = () => {
               />
             </div>
             <div className="form-group">
-              <input type="submit" value="Login" />
+              <input type="submit" value="Giriş Yap" />
               <p>
-                Don't have an account?{" "}
-                <Link to="/register-user">Register here</Link>
+                Hesabını yok mu?{" "}
+                <Link to="/register-user">Kayıt old</Link>
               </p>
             </div>
           </form>

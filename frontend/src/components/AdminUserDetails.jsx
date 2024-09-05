@@ -32,34 +32,34 @@ function AdminUserDetails() {
       const latestAddress = addresses[0];
       return (
         <div>
-          <h3>Latest Address</h3>
-          <p>Flat No: {latestAddress.flatNo}</p>
-          <p>Street: {latestAddress.street}</p>
-          <p>City: {latestAddress.city}</p>
-          <p>State: {latestAddress.state}</p>
-          <p>Zip Code: {latestAddress.zipCode}</p>
+          <h3>Adres</h3>
+          <p>Kapı Numarası: {latestAddress.flatNo}</p>
+          <p>Sokak: {latestAddress.street}</p>
+          <p>Şehir: {latestAddress.city}</p>
+          <p>Durum: {latestAddress.state}</p>
+          <p>Adres Kodu: {latestAddress.zipCode}</p>
         </div>
       );
     } else {
-      return <p>No address available</p>;
+      return <p>Adres Bulunamadı</p>;
     }
   };
 
   return (
     <div className="admin-users">
       {loading ? (
-        <p>Loading...</p>
+        <p>Yükleniyor...</p>
       ) : (
         users.map((user) => (
           <div className="user-card" key={user.userId}>
             <div className="user-info">
-              <h3>User Details</h3>
-              <p>User ID: {user.userId}</p>
-              <p>Email: {user.email}</p>
-              <p>Name: {user.firstName} {user.lastName}</p>
-              <p>Phone Number: {user.phoneNumber}</p>
-              <p>Register Time: {user.registerTime}</p>
-              <p>User Account Status: {user.userAccountStatus}</p>
+              <h3>Kullanıcı Detayı</h3>
+              <p>Kullanıcı ID: {user.userId}</p>
+              <p>Kullanıcı Ad: {user.email}</p>
+              <p>Ad: {user.firstName} {user.lastName}</p>
+              <p>Telefon Numarası: {user.phoneNumber}</p>
+              <p>Kayıt Tarihi: {user.registerTime}</p>
+              <p>Kullanıcı Hesap Durumu: {user.userAccountStatus}</p>
             </div>
             <div className="user-address">
               {getLatestAddress(user)}

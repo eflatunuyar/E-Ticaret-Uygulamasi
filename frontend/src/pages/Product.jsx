@@ -69,23 +69,21 @@ const Product = () => {
   return (
     <div className="product-page">
       <div className="filter-section">
-        <h2>Filter</h2>
+        <h2>Filtrele</h2>
         <hr />
-        <label>Category</label>
+        <label>Kategori</label>
         <select
           value={selectedCategory}
           onChange={(e) => {
             setSelectedCategory(e.target.value);
           }}
         >
-          <option value="All">All</option>
-          <option value="vegetables">Vegetable</option>
-          <option value="fruits">Fruits</option>
-          <option value="electronics">Electronic</option>
-          <option value="gadgets">Gaggets</option>
+          <option value="All">Tümü</option>
+          <option value="electronics">Elektronik</option>
+          <option value="araç">Araç</option>
         </select>
         <br />
-        <label>Price:</label>
+        <label>Fiyat</label>
         <div>
           <select
             value={priceOrder}
@@ -93,18 +91,18 @@ const Product = () => {
               setPriceOrder(e.target.value);
             }}
           >
-            <option value="All">All</option>
-            <option value="LowToHigh">Low to High</option>
-            <option value="HighToLow">High To Low</option>
+            <option value="All">Tümü</option>
+            <option value="LowToHigh">Artan</option>
+            <option value="HighToLow">Azalan</option>
           </select>
         </div>
 
         <br />
         <div>
-          <h4>By Name</h4>
+          <h4>İsim</h4>
           <input
             type="text"
-            placeholder="Search by name"
+            placeholder="İsimle arama"
             value={nameSearch}
             onChange={(e) => setNameSearch(e.target.value)}
           />
@@ -121,7 +119,7 @@ const Product = () => {
               width: "800px",
             }}
           >
-            Product Not found ....
+            Ürün Bulunamadı.
           </h1>
         ) : (
           filteredProducts.map((product) => (
@@ -132,31 +130,28 @@ const Product = () => {
               <div className="product-info">
                 <h2>{product.name}</h2>
                 <p>
-                  <strong>Category :</strong> {product.category}
-                </p>
-                <p>
-                  <strong>Description: </strong>
+                  <strong>Ürün Açıklaması: </strong>
                   {product.description.substring(0, 25)}
                 </p>
-                <h2 className="product-price">Price: ₹ {product.price}</h2>
+                <h2 className="product-price">Fiyat: {product.price}</h2>
                 <p>
                   {" "}
-                  <strong>Rating :</strong>
+                  <strong>Yorum :</strong>
                   {product.reviews.length === 0
-                    ? "Not Available"
+                    ? "Yorum Yok"
                     : product.reviews[0].rating}
                 </p>
 
                 <div>
                   <button onClick={() => addProductToCart(product.productId)}>
-                    Add to Cart
+                    Sepete Ekle
                   </button>
                   <button>
                     <Link
                       to={`/product/${product.productId}`}
                       style={{ textDecoration: "none", color: "white" }}
                     >
-                      View
+                      Görüntüle
                     </Link>
                   </button>
                 </div>

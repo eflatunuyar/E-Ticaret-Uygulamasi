@@ -86,7 +86,7 @@ const Profile = () => {
           margin: "20px",
         }}
       >
-        Profile Section
+        Profil
       </h2>
       <div
         style={{
@@ -102,32 +102,32 @@ const Profile = () => {
           )}
 
           <div className="profile-details">
-            <h1 className="profile-header">Profile Details</h1>
+            <h1 className="profile-header">Profil Detayları</h1>
 
             {profileData ? (
               <>
                 <p style={{ color: "green" }}>
-                  <strong>Account Status:</strong>{" "}
+                  <strong>Hesap Durumu:</strong>{" "}
                   {profileData.userAccountStatus}
                 </p>
                 <p>
-                  <strong>Name:</strong> {profileData.firstName}{" "}
+                  <strong>Ad:</strong> {profileData.firstName}{" "}
                   {profileData.lastName}
                 </p>
                 <p>
-                  <strong>Email:</strong> {profileData.email}
+                  <strong>Kullanıcı Adı:</strong> {profileData.email}
                 </p>
 
                 <p>
-                  <strong>Phone Number:</strong> {profileData.phoneNumber}
+                  <strong>Telefon Numarası:</strong> {profileData.phoneNumber}
                 </p>
                 <p>
-                  <strong>Registration :</strong>{" "}
+                  <strong>Kayıt :</strong>{" "}
                   {profileData.registerTime.substring(0, 10)}
                 </p>
               </>
             ) : (
-              <p>Loading profile data...</p>
+              <p>Bilgilerinizi giriniz...</p>
             )}
           </div>
           <div className="latest-address">
@@ -155,18 +155,18 @@ const Profile = () => {
                     handlerUpdateAddress(latestAddress);
                   }}
                 >
-                  Update Address
+                  Adres Eklenmedi
                 </button>
               </>
             ) : (
               <>
-                <h2>Address Not updated</h2>
+                <h2>Adres Güncellenemedi</h2>
                 <button
                   onClick={() => {
                     handlerAddAddress();
                   }}
                 >
-                  Add Address
+                  Adres Ekle
                 </button>
               </>
             )}
@@ -175,7 +175,7 @@ const Profile = () => {
         <div className="updatePassword">
           {showPassSection ? (
             <form onSubmit={handleSubmit}>
-              <label htmlFor="newPassword">New Password:</label>
+              <label htmlFor="newPassword">Yeni Şifre:</label>
               <input
                 type="password"
                 name="newPassword"
@@ -183,14 +183,14 @@ const Profile = () => {
                 onChange={handleChange}
               />
               {error && <p className="error">{error}</p>}
-              <button type="submit">Update Password</button>
+              <button type="submit">Güncelle</button>
               <button
                 type="button"
                 onClick={() => {
                   setShowPassSection(false);
                 }}
               >
-                Cancel update
+                Güncellemeyi İptal Et
               </button>
             </form>
           ) : (
@@ -199,7 +199,7 @@ const Profile = () => {
                 changePassword();
               }}
             >
-              ChangePassword
+              Şifre Değiştir
             </button>
           )}
         </div>

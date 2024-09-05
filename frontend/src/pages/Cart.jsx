@@ -103,10 +103,10 @@ const Cart = () => {
               </div>
               <div className="cartproduct-info">
                 <h2>{item.product.name}</h2>
-                <p>Category: {item.product.category}</p>
-                <p>Description: {item.product.description}</p>
+                <p>Kategori: {item.product.category}</p>
+                <p>Ürün Açıklaması: {item.product.description}</p>
                 <h2 className="cartproduct-price">
-                  Price: ₹ {item.product.price}
+                  Fiyat: {item.product.price}
                 </h2>
                 <div className="increaseBtn">
                   <button onClick={() => increaseCount(item.product.productId)}>
@@ -131,7 +131,7 @@ const Cart = () => {
                       removeProductfromCart(item.product.productId)
                     }
                   >
-                    Remove
+                    Sil
                   </button>
                 </div>
               </div>
@@ -141,24 +141,24 @@ const Cart = () => {
       ) : (
         <div className="empty-cart-message">
           <h1>
-            Your cart is empty. <Link to="/">Shop Now</Link>
+            Sepetiniz Boş. <Link to="/">Alışveriş Yap</Link>
           </h1>
         </div>
       )}
 
       <div className="cart-details">
-        <h2>Total Cart Amount: </h2>
-        <h2>${"   " + totalAmount}</h2>
+        <h2>Toplam Fiyat: </h2>
+        <h2>{"   " + totalAmount}</h2>
         <div className="counter-box">
           <div>
-            <button onClick={orderPlaced}>Order Placed</button>
+            <button onClick={orderPlaced}>Sipariş Ver</button>
           </div>
           <div>
             <button
               onClick={() => emptyCart(cartId)}
               style={{ backgroundColor: "red" }}
             >
-              Empty Cart
+              Sepeti Temizle
             </button>
           </div>
           <div>
@@ -167,7 +167,7 @@ const Cart = () => {
                 navigate("/user/order-details");
               }}
             >
-              Order Page
+              Siparişlerim
             </button>
           </div>
         </div>

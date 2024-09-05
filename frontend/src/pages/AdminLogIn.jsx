@@ -61,10 +61,10 @@ const AdminLogin = () => {
 
       <div className="loginConatiner">
         <div className="login-form">
-          <h2 style={{ textAlign: "center" }}>Admin LogIn </h2>
+          <h2 style={{ textAlign: "center" }}>Admin Girişi</h2>
           <form onSubmit={submitHandler}>
             <div className="form-group">
-              <label htmlFor="username">Username:</label>
+              <label htmlFor="username">Kullanıcı Adı:</label>
               <input
                 id="username"
                 type="text"
@@ -75,7 +75,7 @@ const AdminLogin = () => {
             </div>
             <br />
             <div className="form-group">
-              <label>Password:</label>
+              <label>Şifre:</label>
               <input
                 type="password"
                 name="password"
@@ -84,7 +84,7 @@ const AdminLogin = () => {
               />
             </div>
             <div className="form-group">
-              <input type="submit" value="Login" />
+              <input type="submit" value="Giriş Yap" />
             </div>
           </form>
         </div>

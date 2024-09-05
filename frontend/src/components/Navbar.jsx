@@ -41,14 +41,14 @@ const Navbar = () => {
             navigate("/");
           }}
         >
-          E-Commerce
+          ERD AKSESUAR
         </h3>
       </div>
 
       <div className="search-bar">
         <input
           type="text"
-          placeholder="Search..."
+          placeholder="Ara"
           onClick={() => {
             navigate("/product");
           }}
@@ -66,7 +66,7 @@ const Navbar = () => {
         >
           <FontAwesomeIcon icon={faCartShopping} className="cart-icon" />
 
-          <p style={{ margin: "4px" }}>Cart</p>
+          <p style={{ margin: "4px" }}>Sepete</p>
         </div>
         {userId ? (
           <>
@@ -80,7 +80,7 @@ const Navbar = () => {
               <FontAwesomeIcon icon={faUser} className="cart-icon" />
               {name}
             </div>
-            <div onClick={handleLogoutClick}>Logout</div>
+            <div onClick={handleLogoutClick}>Çıkış yap</div>
           </>
         ) : (
           <>
@@ -90,7 +90,7 @@ const Navbar = () => {
               onClick={handleLoginClick}
             >
               <FontAwesomeIcon icon={faUser} className="cart-icon" />
-              Login
+              Giriş Yap
             </div>
             <div
               className="iconbutton"
@@ -98,7 +98,7 @@ const Navbar = () => {
                 navigate("/register-user");
               }}
             >
-              SignIn
+              Kayıt ol
             </div>
           </>
         )}

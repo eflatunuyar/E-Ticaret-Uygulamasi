@@ -47,10 +47,10 @@ const Address = ({ onclose }) => {
           <span className="close-button" onClick={onclose}>
             &times;
           </span>
-          <h2 style={{ textAlign: "center" }}>Required Address</h2>
+          <h2 style={{ textAlign: "center" }}>Adres Bilgileri</h2>
           <form onSubmit={handleSubmit}>
             <div>
-              <label htmlFor="flatNo">Flat No:</label>
+              <label htmlFor="flatNo">Kat No:</label>
               <input
                 type="text"
                 name="flatNo"
@@ -59,7 +59,7 @@ const Address = ({ onclose }) => {
               />
             </div>
             <div>
-              <label htmlFor="street">Street:</label>
+              <label htmlFor="street">Sokak:</label>
               <input
                 type="text"
                 name="street"
@@ -68,7 +68,7 @@ const Address = ({ onclose }) => {
               />
             </div>
             <div>
-              <label htmlFor="city">City:</label>
+              <label htmlFor="city">Şehir:</label>
               <input
                 type="text"
                 name="city"
@@ -77,7 +77,7 @@ const Address = ({ onclose }) => {
               />
             </div>
             <div>
-              <label htmlFor="zipCode">Zip Code:</label>
+              <label htmlFor="zipCode">Adres Kodu:</label>
               <input
                 type="text"
                 name="zipCode"
@@ -86,7 +86,7 @@ const Address = ({ onclose }) => {
               />
             </div>
             <div>
-              <label htmlFor="state">State:</label>
+              <label htmlFor="state">Durum:</label>
               <input
                 type="text"
                 name="state"
@@ -94,7 +94,7 @@ const Address = ({ onclose }) => {
                 onChange={handleChange}
               />
             </div>
-            <button type="submit">Save</button>
+            <button type="submit">Kayıt Et</button>
           </form>
         </div>
       </div>

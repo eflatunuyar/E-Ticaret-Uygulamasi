@@ -22,7 +22,7 @@ const AddOrderAdmin = () => {
 
   return (
     <>
-      <h2 style={{textAlign:"center",margin:"10px"}}>All Orders Details</h2>
+      <h2 style={{textAlign:"center",margin:"10px"}}>Bütün Siparişler</h2>
       <div className="admin-orders">
         {loading ? (
           <p>Loading...</p>
@@ -30,38 +30,38 @@ const AddOrderAdmin = () => {
           orders.map((order) => (
             <div className="order-card" key={order.orderId}>
               <div className="orderpart">
-                <h3>Order Details</h3>
-                <p>Order ID: {order.orderId}</p>
-                <p>Status: {order.status}</p>
-                <p>Order Date: {order.orderDate}</p>
+                <h3>Sipariş Detayları</h3>
+                <p>Sipariş ID: {order.orderId}</p>
+                <p>Durum: {order.status}</p>
+                <p>Sipariş Tarihi: {order.orderDate}</p>
                 <hr />
                 {order.orderItem.map((item) => (
                   <div className="order-item" key={item.orderItemId}>
-                    <p>Product: {item.product.name}</p>
-                    <p>Price: {item.product.price}</p>
-                    <p>Quantity: {item.quantity}</p>
+                    <p>Ürün: {item.product.name}</p>
+                    <p>Fiyat: {item.product.price}</p>
+                    <p>Miktar: {item.quantity}</p>
                   </div>
                 ))}
               </div>
               <div className="customerdetails">
-                <h3>Customer Details</h3>
-                <p>User ID: {order.user.userId}</p>
+                <h3>Kullanıcı Detayları</h3>
+                <p>Kullanıcı ID: {order.user.userId}</p>
                 <p>
-                  Name: {order.user.firstName} {order.user.lastName}
+                  Ad: {order.user.firstName} {order.user.lastName}
                 </p>
-                <p>Phone Number: {order.user.phoneNumber}</p>
+                <p>Telefon Numarası: {order.user.phoneNumber}</p>
 
-                <h3>Payment Details</h3>
+                <h3>Ödeme Detayları</h3>
                 {order.payment ? (
                   <>
-                    <p>Payment ID: {order.payment.paymentId}</p>
-                    <p>Payment Date: {order.payment.paymentDate}</p>
-                    <p>Payment Amount: {order.payment.paymentAmount}</p>
-                    <p>Payment Method: {order.payment.paymentMethod}</p>
-                    <p>Payment Status: {order.payment.paymentStatus}</p>
+                    <p>Ödeme ID: {order.payment.paymentId}</p>
+                    <p>Ödeme Tarihi: {order.payment.paymentDate}</p>
+                    <p>Ödeme Tutarı: {order.payment.paymentAmount}</p>
+                    <p>Ödeme Metodu: {order.payment.paymentMethod}</p>
+                    <p>Ödeme Durumu: {order.payment.paymentStatus}</p>
                   </>
                 ) : (
-                  <p>No payment information available</p>
+                  <p>Ödeme Bilgisi Yok.</p>
                 )}
               </div>
             </div>

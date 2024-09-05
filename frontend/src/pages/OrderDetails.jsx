@@ -63,19 +63,19 @@ const OrderDetails = () => {
               allOrder.map((order, index) => (
                 <div key={index} className="order">
                   <div className="odr1">
-                    <h3>Order Number : {index + 1}</h3>
-                    <p>Order ID: {order.orderId}</p>
-                    <p>Status: {order.status}</p>
+                    <h3>Sipariş Numarası: {index + 1}</h3>
+                    <p>Sipariş ID: {order.orderId}</p>
+                    <p>Durum: {order.status}</p>
                     <p>
-                      Order Date: {new Date(order.orderDate).toLocaleString()}
+                      Sipariş Tarihi: {new Date(order.orderDate).toLocaleString()}
                     </p>
                     <h3 style={{ color: "green" }}>
-                      Total Amount: ${order.totalAmount}
+                      Toplam Fiyat: {order.totalAmount}
                     </h3>
 
                     {order.status === "SHIPPED" ? (
                       <button style={{ backgroundColor: "green" }} disabled>
-                        View
+                        Görüntüle
                       </button>
                     ) : (
                       <button
@@ -84,13 +84,13 @@ const OrderDetails = () => {
                           handeldeleteOrder(order.orderId);
                         }}
                       >
-                        Cancel Order
+                        Siparişi İptal Et
                       </button>
                     )}
 
                     {order.status === "SHIPPED" ? (
                       <button style={{ backgroundColor: "green" }} disabled>
-                        SHIPPED
+                        Durum
                       </button>
                     ) : (
                       <button
@@ -98,16 +98,16 @@ const OrderDetails = () => {
                           handeldemakePayment(order.orderId);
                         }}
                       >
-                        Make Payment
+                        Ödeme Yap
                       </button>
                     )}
                   </div>
 
                   <div className="odr2">
-                    <h3>Order Items</h3>
+                    <h3>Sipariş Ürünü</h3>
                     {order.orderItem.map((item) => (
                       <li key={item.orderItemId}>
-                        {item.product.name} - Quantity: {item.quantity}
+                        {item.product.name} - Miktar: {item.quantity}
                       </li>
                     ))}
                   </div>
@@ -123,14 +123,14 @@ const OrderDetails = () => {
                   textAlign: "center",
                 }}
               >
-                <h1 style={{ marginTop: "50px" }}>No items present</h1>
+                <h1 style={{ marginTop: "50px" }}>Geçmiş siparişiniz yok</h1>
               </div>
             )}
         </div>
         <div className="box">
-          <h3>Order History</h3>
+          <h3>Sipariş Geçmişi</h3>
           <button onClick={() => handleProfileSection(userId)}>
-            View Profile
+            Profilini Görüntüle
           </button>
           
         </div>

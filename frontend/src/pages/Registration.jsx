@@ -58,10 +58,10 @@ const Registration = () => {
   return (
     <div className="login-form1" style={bg}>
     <div className="login-form">
-      <h2 style={{textAlign:"center"}}>Registration </h2>
+      <h2 style={{textAlign:"center"}}>Kayıt ol</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label>Email:</label>
+          <label>Kullanıcı Adı:</label>
           <input
             type="text"
             name="email"
@@ -70,7 +70,7 @@ const Registration = () => {
           />
         </div>
         <div className="form-group">
-          <label>Password:</label>
+          <label>Şifre:</label>
           <input
             type="password"
             name="password"
@@ -79,7 +79,7 @@ const Registration = () => {
           />
         </div>
         <div className="form-group">
-          <label>First Name:</label>
+          <label>Ad:</label>
           <input
             type="text"
             name="firstName"
@@ -88,7 +88,7 @@ const Registration = () => {
           />
         </div>
         <div className="form-group">
-          <label>Last Name:</label>
+          <label>Soyad:</label>
           <input
             type="text"
             name="lastName"
@@ -97,7 +97,7 @@ const Registration = () => {
           />
         </div>
         <div className="form-group">
-          <label>Phone Number:</label>
+          <label>Telefon Numarası:</label>
           <input
             type="text"
             name="phoneNumber"
@@ -106,12 +106,12 @@ const Registration = () => {
           />
         </div>
         <div className="form-group">
-          <input type="submit" value="Register" />
+          <input type="submit" value="Kayıt ol" />
         </div>
       </form>
       <p>
-              Don't have an account?{" "}
-              <Link to="/login">Login here</Link>
+              Hesabınız var mı?{" "}
+              <Link to="/login">Giriş Sayfası</Link>
             </p>
     </div>
     </div>
